@@ -1,0 +1,148 @@
+---
+import CategoryPlaceholder from './CategoryPlaceholder.astro';
+
+const categories = [
+  {
+    id: 'live',
+    label: 'Live Event Broadcasts',
+    items: [
+      { title: "Nathan's Famous Hot Dog Contest", client: 'ESPN', detail: 'Coney Island, Brooklyn — 7 consecutive years (2004–2010)', img: '/images/portfolio/espn-mics.jpg', tag: 'Live Events' },
+      { title: "New Year's Eve No Limits", client: 'ESPN Original Entertainment', detail: 'Rio Hotel, Las Vegas — Red Bull sponsored; Robbie Maddison motorcycle jump record 322 ft.', img: null, tag: 'Motorsports' },
+      { title: 'KROB Big Air BMX — Central Park', client: '360 Ventures / Red Bull', detail: 'World Record BMX Big Air, Central Park NYC', img: '/images/portfolio/motox-backflip.jpg', tag: 'Action Sports' },
+      { title: 'The Impossible Jump', client: 'ESPN / Caesars Palace', detail: 'Mike Metzger backflip over Caesars Palace fountains, Las Vegas', img: null, tag: 'Motorsports' },
+      { title: 'NCAA Indoor Track & Field Championships', client: 'ESPNU', detail: 'Exclusive HDTV packager since 2009 — 10 consecutive years', img: '/images/portfolio/project3.jpg', tag: 'Track & Field' },
+      { title: 'World Special Olympics', client: 'World Special Olympics', detail: '7,000+ athletes, 143 countries — New Haven, CT; Opening ceremony at Yale Bowl', img: null, tag: 'Olympic Sports' },
+      { title: 'World Cup Ski Racing', client: 'ESPN', detail: 'Beaver Creek, CO — 15 consecutive years (1989–2003); 2002 Salt Lake City Olympics Alpine Director', img: '/images/portfolio/dh-racer.jpg', tag: 'Skiing' },
+      { title: '31st Heineken Regatta', client: 'ESPN International', detail: 'Premier Caribbean sailing event, St. Maarten', img: null, tag: 'Sailing' },
+      { title: 'Windfall Action Sports', client: 'ESPN X Games / World Sports Mktg', detail: '17 Winter & Summer X-Games; BMX, freestyle motocross, skateboarding', img: '/images/portfolio/project1.jpg', tag: 'Action Sports' },
+    ],
+  },
+  {
+    id: 'specials',
+    label: 'Edited TV Specials',
+    items: [
+      { title: 'IHRA Greatest Hits', client: 'ESPN', detail: 'Official TV producer of the IHRA, 1987–1998', img: null, tag: 'Racing' },
+      { title: 'World Championships of Athletics', client: 'ESPN', detail: 'Paris, France (2003) — 12+ hours of live coverage', img: null, tag: 'Track & Field' },
+      { title: 'Tour DuPont 1995', client: 'Medalist Sports', detail: 'Lance Armstrong (age 23) wins 1,130-mile stage race', img: null, tag: 'Cycling' },
+      { title: 'Coors International Cycling Classic', client: 'FCB Telecom', detail: 'San Francisco, Napa, Aspen, Vail, Grand Junction — Windfall\'s intro to world-class cycling', img: '/images/portfolio/dh-racer.jpg', tag: 'Cycling' },
+      { title: 'NBC Star Skates', client: 'Disson Skating', detail: 'Kristi Yamaguchi, Elvis Stojko, Victor Petrenko — live music meets Olympic Champions', img: null, tag: 'Figure Skating' },
+      { title: 'World University Games', client: 'Buffalo Sports Commission', detail: '6,400 athletes, 136 countries, Buffalo NY — first U.S. host in 70 years', img: null, tag: 'Olympic Sports' },
+      { title: 'Sled Smashes and Crashes', client: 'ESPN / Outdoor Life Network', detail: 'World Snowmobile Association official producer, 1998–2005', img: null, tag: 'Motorsports' },
+      { title: 'Track & Field History', client: 'USATF', detail: 'Millrose Games, Penn Relays, Drake Relays — celebrating a century of American track tradition', img: '/images/portfolio/project4.jpg', tag: 'Track & Field' },
+      { title: 'Royal Caribbean 5K Road Race', client: 'ESPN International', detail: 'Inaugural Royal 5K aboard Allure of the Seas, St. Maarten', img: null, tag: 'Track & Field' },
+      { title: 'The Crosby Clambake', client: 'ESPN', detail: 'Bing Crosby Pro-Am Golf — Pebble Beach, Cypress Point, Spyglass Hill', img: null, tag: 'Golf' },
+      { title: 'World Cycling League Promo', client: 'World Cycling League', detail: 'Investor sizzle reel for Speedtrak™ indoor velodrome cycling format', img: null, tag: 'Cycling' },
+    ],
+  },
+  {
+    id: 'docs',
+    label: 'Documentaries',
+    items: [
+      { title: 'Tale of Two Champions', client: 'People and Properties', detail: 'Ivan Lendl vs. John McEnroe — Arthur Ashe hosts. New York Int\'l Film Festival Gold.', img: '/images/portfolio/sport-docs.jpg', video: 'https://vimeo.com/110513079', tag: 'Tennis' },
+      { title: 'Alive and Kickn', client: 'aliveandkickn.org', detail: 'Northeast Film Festival 2013 Best Documentary — three-time colon cancer survivor David Dubin.', img: null, video: 'https://youtu.be/rM7o9fXjgTk', tag: 'Soccer' },
+      { title: 'Windfall Entertainment Demo', client: 'ESPN / Kaleidoscope Entertainment', detail: 'Bruce Hornsby, Jeffrey Osborne, Keb Mo, Robert Randolph at FIS World Cup Skiing.', img: null, video: 'https://vimeo.com/110530476', tag: 'Entertainment' },
+      { title: 'Tribute to Carlo Fassi', client: 'ESPN', detail: 'Figure skating coach who guided 4 Olympic gold medalists: Peggy Fleming, Dorothy Hamill, John Curry, Robin Cousins.', img: null, tag: 'Figure Skating' },
+      { title: 'US Open: Tennis Made in America', client: 'People & Properties', detail: 'McEnroe, Connors, Edberg, Evert, Navratilova — Flushing Meadow history.', img: null, tag: 'Tennis' },
+      { title: 'Three Times a Champion', client: 'People and Properties', detail: 'US Open Tennis history from 1881 to Flushing Meadows. US National Championship origins.', img: null, tag: 'Tennis' },
+      { title: 'The National Senior Games', client: 'ESPN', detail: 'World\'s largest multi-sport event for athletes 50+ — founded 1985, inaugural 1987.', img: null, tag: 'Olympic Sports' },
+      { title: 'Nike World Masters Games', client: 'Nike', detail: '25,000 competitors from 100 countries — Portland, Oregon (1998).', img: null, tag: 'Olympic Sports' },
+    ],
+  },
+  {
+    id: 'corporate',
+    label: 'Corporate Mission Videos',
+    items: [
+      { title: 'The Great Healthy Yard Project', client: 'tghyp.org', detail: 'Environmental nonprofit promoting chemical-free yards and drinking water quality.', img: null, tag: 'Corporate' },
+      { title: 'World Cycling League Speedtrak™', client: 'World Cycling League', detail: 'Promotional reel introducing television-focused indoor velodrome racing for investors.', img: null, tag: 'Cycling' },
+    ],
+  },
+];
+---
+
+<section id="portfolio" class="py-28 bg-surface-800">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="flex items-center gap-4 mb-4">
+      <div class="w-8 h-[2px] bg-magenta-500"></div>
+      <span class="text-magenta-500 text-xs tracking-[0.4em] uppercase font-medium">Portfolio</span>
+    </div>
+
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <h2 class="font-serif italic text-5xl md:text-6xl text-white leading-tight">Our Work</h2>
+      <p class="text-gray-500 max-w-sm text-base font-light leading-relaxed">
+        27 productions across four decades — live events, TV specials, documentaries, and corporate films.
+      </p>
+    </div>
+
+    <!-- Category tabs -->
+    <div class="flex flex-wrap gap-2 mb-10" id="portfolio-tabs">
+      {categories.map((cat, i) => (
+        <button
+          data-tab={cat.id}
+          class={`px-4 py-2 text-xs tracking-widest uppercase font-medium transition-colors tab-btn ${i === 0 ? 'bg-magenta-500 text-white' : 'border border-white/15 text-gray-400 hover:border-magenta-500 hover:text-magenta-400'}`}
+        >
+          {cat.label}
+        </button>
+      ))}
+    </div>
+
+    <!-- Category panels -->
+    {categories.map((cat, i) => (
+      <div id={`panel-${cat.id}`} class={`portfolio-panel ${i !== 0 ? 'hidden' : ''}`}>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {cat.items.map((item) => (
+            <div class="group bg-surface-700 border border-white/5 hover:border-magenta-500/30 transition-all duration-200 overflow-hidden">
+              {item.img ? (
+                <div class="h-40 overflow-hidden">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <CategoryPlaceholder category={item.tag} />
+              )}
+              <div class="p-6">
+                <p class="text-magenta-500 text-[10px] tracking-[0.3em] uppercase font-medium mb-1">{item.client}</p>
+                <h3 class="text-white font-medium text-base mb-2 leading-snug">{item.title}</h3>
+                <p class="text-gray-500 text-xs leading-relaxed">{item.detail}</p>
+                {'video' in item && item.video && (
+                  <a
+                    href={item.video}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 mt-3 text-magenta-500 hover:text-magenta-400 text-xs tracking-wider uppercase transition-colors"
+                  >
+                    <span class="text-[10px]">▶</span> Watch
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.tab-btn');
+  const panels = document.querySelectorAll<HTMLDivElement>('.portfolio-panel');
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      tabs.forEach((t) => {
+        t.classList.remove('bg-magenta-500', 'text-white');
+        t.classList.add('border', 'border-white/15', 'text-gray-400');
+      });
+      tab.classList.add('bg-magenta-500', 'text-white');
+      tab.classList.remove('border', 'border-white/15', 'text-gray-400');
+      panels.forEach((panel) => {
+        panel.classList.toggle('hidden', panel.id !== `panel-${target}`);
+      });
+    });
+  });
+</script>

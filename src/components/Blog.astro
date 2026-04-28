@@ -1,0 +1,209 @@
+---
+import CategoryPlaceholder from './CategoryPlaceholder.astro';
+
+const posts = [
+  {
+    slug: 'hd-thoreau-award',
+    date: 'February 10, 2018',
+    title: "Ralph J. Mole' Awarded Excellence in Track and Field Broadcasting",
+    excerpt: "The Track and Field Writers of America presented Ralph J. Mole' with the H.D. Thoreau Award — marking his 39th year producing sports television for ESPN and Windfall's 10th consecutive year as ESPN Collegiate Track & Field packager.",
+    category: 'Track & Field',
+    img: '/images/blog/hd-thoreau-award.jpg',
+    featured: true,
+  },
+  {
+    slug: 'reunion-2018',
+    date: 'December 13, 2017',
+    title: "Two Legendary Sports TV Pros Reunited in 2018",
+    excerpt: "Don Colantonio joins Ralph J. Mole' at Windfall as Operations Producer/Tech Manager. Previous collaborations include 15 years of live ESPN World Cup Skiing, 17 X-Games, Olympic Festivals, and the motorcycle backflip over Caesars Palace.",
+    category: 'Track & Field',
+    img: '/images/blog/rjm-dc-reunion.jpg',
+    featured: false,
+  },
+  {
+    slug: 'windfall-2018',
+    date: 'January 1, 2018',
+    title: "Windfall Predicts the Greatest New Year Ever in 2018",
+    excerpt: "Entering its 10th consecutive year as ESPN's T&F TV production packager, Windfall announces its partnership with Don Colantonio and continued use of Chyron Hego's 'Coach Paint' technology for enhanced visual analysis.",
+    category: 'Track & Field',
+    img: '/images/blog/new-year-2018.jpg',
+    featured: false,
+  },
+  {
+    slug: 'espn-renewal-10th',
+    date: 'December 11, 2017',
+    title: "Windfall Renews ESPN Collegiate T&F for 10th Year",
+    excerpt: "ESPN contracts Windfall to deliver NCAA and SEC Indoor and Outdoor Track & Field Championships across linear and digital platforms — 7 HDTV cameras, VizRT graphics, EVS XT3 servers, tapeless workflow.",
+    category: 'Track & Field',
+    img: null,
+    featured: false,
+  },
+  {
+    slug: 'coach-paint',
+    date: 'December 8, 2017',
+    title: "Windfall's 2017 Test with 'Coach Paint' an Overwhelming Success",
+    excerpt: "Taking a football coach's digital training tool and adapting it for broadcast TV. Chyron Hego's Coach Paint enhanced 40+ hours of live T&F coverage with visual analysis of starting block launches, hurdle clearances, and javelin trajectories.",
+    category: 'Technology',
+    img: null,
+    featured: false,
+  },
+  {
+    slug: 'world-cup-skiing',
+    date: 'November 27, 2016',
+    title: "Reminiscing about World Cup Skiing at Windfall Productions",
+    excerpt: "After 34 years, Killington made the 'big league of Olympic winter sport.' Windfall directed World Cup Ski Racing with ESPN for 15 years (1989–2003) and served as live director for the 2002 Salt Lake City Olympics Alpine events.",
+    category: 'Skiing',
+    img: '/images/portfolio/dh-racer.jpg',
+    featured: false,
+  },
+  {
+    slug: 'espn-renewal-2016',
+    date: 'October 20, 2016',
+    title: "Windfall Productions Renews ESPN Collegiate Track & Field — 9th Consecutive Year",
+    excerpt: "For the ninth consecutive year, Windfall secured its ESPN television packaging agreement, delivering NCAA and SEC Track & Field championships across multiple ESPN platforms.",
+    category: 'Track & Field',
+    img: null,
+    featured: false,
+  },
+  {
+    slug: 'july-4th-coney-island',
+    date: 'July 4, 2018',
+    title: "Remembering July 4th and Coney Island",
+    excerpt: "Ralph J. Mole' recalls producing Nathan's 4th of July Hot Dog Eating Contest for seven consecutive years (2004–2010) — an era when a Japanese champion made Coney Island's contest a truly hard-fought international competition.",
+    category: 'Entertainment',
+    img: null,
+    featured: false,
+  },
+  {
+    slug: 'flycam-espnu',
+    date: 'March 10, 2011',
+    title: "The First Fly-Cam Ever Used on ESPN Track & Field",
+    excerpt: "2011 NCAA Indoor Track & Field Championships at Texas A&M — debut of FlyCam technology in track and field broadcasting. 387 feet between platforms, 600-lb system, 27-lb camera payload. ESPN analyst Larry Rawson: 'You can see who gets out of the blocks first with clarity.'",
+    category: 'Technology',
+    img: null,
+    featured: false,
+  },
+  {
+    slug: 'penn-relays-5th',
+    date: 'April 21, 2010',
+    title: "Windfall's 5th Consecutive Production of the Penn Relays",
+    excerpt: "Fifth consecutive year as exclusive television production partner for USATF's Penn Relays on ESPN2. The 116th running — 8 cameras including robotic units beneath the upper deck at Franklin Field. Usain Bolt led Jamaica's relay team.",
+    category: 'Track & Field',
+    img: null,
+    featured: false,
+  },
+  {
+    slug: 'stars-in-danger',
+    date: 'December 1, 2012',
+    title: "Stars in Danger 'The Pilot'",
+    excerpt: "Ralph J. Mole' served as live director for Fox's 'Stars In Danger: The High Dive.' Eight celebrities including Terrell Owens, JWoww, and Alexandra Paul competing in Olympic-style diving. Filming at Greensboro Aquatic Center, NC.",
+    category: 'Entertainment',
+    img: null,
+    featured: false,
+  },
+  {
+    slug: 'northeast-film-festival-2013',
+    date: 'September 15, 2013',
+    title: "2013 Northeast Film Festival — Best Documentary",
+    excerpt: "Windfall won Best Documentary for 'Alive and Kickn' — the compelling story of three-time colon cancer survivor David Dubin and his Alive and Kickathon charity soccer event.",
+    category: 'Awards',
+    img: null,
+    featured: false,
+  },
+  {
+    slug: 'royal-5k-st-maarten',
+    date: 'November 21, 2011',
+    title: "Windfall Takes to the Sea — Royal 5K in St. Maarten",
+    excerpt: "Windfall partnered with ESPN International to produce a half-hour sports special aboard Royal Caribbean's Allure of the Seas. Frank Shorter (1972 Olympic gold medalist) among mentors. Aired on ESPN International.",
+    category: 'Live Events',
+    img: null,
+    featured: false,
+  },
+  {
+    slug: 'world-cycling-league',
+    date: 'November 24, 2014',
+    title: "The World Cycling League",
+    excerpt: "Windfall created a promotional video for the World Cycling League — urgently needed for investor presentations. 'What thrilled crowds in the early 20th century is repackaged for the 21st by the World Cycling League.'",
+    category: 'Corporate',
+    img: null,
+    featured: false,
+  },
+];
+
+const featured = posts.find(p => p.featured);
+const rest = posts.filter(p => !p.featured);
+---
+
+<section id="blog" class="py-28 bg-surface-900">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="flex items-center gap-4 mb-4">
+      <div class="w-8 h-[2px] bg-magenta-500"></div>
+      <span class="text-magenta-500 text-xs tracking-[0.4em] uppercase font-medium">Blog</span>
+    </div>
+
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <h2 class="font-serif italic text-5xl md:text-6xl text-white leading-tight">From the Field</h2>
+      <p class="text-gray-500 max-w-sm text-base font-light leading-relaxed">
+        Stories, announcements, and behind-the-scenes from 35+ years of broadcast production.
+      </p>
+    </div>
+
+    <!-- Featured post -->
+    {featured && (
+      <div class="bg-surface-700 border border-white/5 mb-8 grid md:grid-cols-2 overflow-hidden group hover:border-magenta-500/30 transition-colors">
+        <div class="h-64 md:h-auto overflow-hidden">
+          {featured.img ? (
+            <img
+              src={featured.img}
+              alt={featured.title}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          ) : (
+            <CategoryPlaceholder category={featured.category} height="h-full" />
+          )}
+        </div>
+        <div class="p-8 flex flex-col justify-center">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="bg-magenta-500 text-white text-[9px] tracking-widest uppercase px-2 py-0.5 font-medium">
+              Featured
+            </span>
+            <span class="text-gray-500 text-xs">{featured.date}</span>
+          </div>
+          <h3 class="text-white font-semibold text-xl md:text-2xl mb-4 leading-snug">{featured.title}</h3>
+          <p class="text-gray-400 text-sm leading-relaxed font-light">{featured.excerpt}</p>
+          <span class="mt-4 text-magenta-500 text-xs tracking-widest uppercase font-medium">{featured.category}</span>
+        </div>
+      </div>
+    )}
+
+    <!-- Post grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {rest.map((post) => (
+        <div class="bg-surface-700 border border-white/5 hover:border-magenta-500/30 transition-colors overflow-hidden group">
+          {post.img ? (
+            <div class="h-40 overflow-hidden">
+              <img
+                src={post.img}
+                alt={post.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+          ) : (
+            <CategoryPlaceholder category={post.category} />
+          )}
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-magenta-500 text-[10px] tracking-widest uppercase font-medium">{post.category}</span>
+              <span class="text-gray-600 text-xs">{post.date}</span>
+            </div>
+            <h3 class="text-white font-medium text-sm leading-snug">{post.title}</h3>
+            <p class="text-gray-500 text-xs leading-relaxed mt-2 line-clamp-3">{post.excerpt}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

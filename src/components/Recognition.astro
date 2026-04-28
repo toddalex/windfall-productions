@@ -1,0 +1,91 @@
+---
+const awards = [
+  {
+    name: 'Sports Emmy Awards',
+    count: '4×',
+    details: ['Olympic Volleyball — Los Angeles (ABC)', 'Olympic Wrestling — Seoul (NBC)', 'Olympic Volleyball — Barcelona (NBC)', '2005 Winter X Games — Multi-camera & rider-mounted innovation'],
+  },
+  {
+    name: 'Cable ACE Awards',
+    count: '2×',
+    details: ['WCT Finals Tennis Championships', 'Davis Cup Finals Coverage'],
+  },
+  {
+    name: "NY Int'l Film Festival",
+    count: '3×',
+    details: ['Gold — "Tale of Two Champions" / US Open Tennis', 'Silver — Pro Cycling & Figure Skating', 'Bronze — Junior Olympics & Tennis'],
+  },
+  {
+    name: 'Northeast Film Festival',
+    count: '1×',
+    details: ['Best Documentary 2013 — "Alive and Kickn"'],
+  },
+];
+
+const clients = [
+  'ESPN', 'ESPNU', 'ESPN2', 'ESPN3', 'ESPN International',
+  'NBC Sports', 'CBS Sports', 'ABC', 'TBS', 'FOX',
+  'Longhorn Network', 'Prime Ticket', 'Cox Media', 'Comcast SportsNet',
+  'Outdoor Life Network', 'VERSUS', 'USA Network', 'SEC Network',
+  'Red Bull', 'Nike', 'Special Olympics', 'USATF',
+  'World Sports Marketing', 'Kaleidoscope Entertainment', 'Major League Eating',
+  'Olympic Broadcast Services', 'Ogilvy & Mather', '360 Ventures',
+];
+---
+
+<section id="recognition" class="py-28 bg-surface-800">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="flex items-center gap-4 mb-4">
+      <div class="w-8 h-[2px] bg-magenta-500"></div>
+      <span class="text-magenta-500 text-xs tracking-[0.4em] uppercase font-medium">Recognition</span>
+    </div>
+
+    <h2 class="font-serif italic text-5xl md:text-6xl text-white mb-16 leading-tight">
+      Awards & Clients
+    </h2>
+
+    <!-- Award cards (text-only, no broken images) -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+      {awards.map((award) => (
+        <div class="bg-surface-700 border border-white/5 p-6 group hover:border-magenta-500/30 transition-colors">
+          <div class="flex items-baseline justify-between mb-4 pb-4 border-b border-white/5">
+            <h3 class="text-white font-medium text-base leading-tight">{award.name}</h3>
+            <span class="text-magenta-500 font-black text-2xl tracking-tight ml-2">{award.count}</span>
+          </div>
+          <ul class="space-y-2">
+            {award.details.map((d) => (
+              <li class="text-gray-500 text-xs leading-relaxed flex gap-2">
+                <span class="text-magenta-500 mt-0.5 flex-shrink-0">›</span>
+                <span>{d}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <!-- H.D. Thoreau Award callout -->
+    <div class="bg-surface-700 border border-magenta-500/20 p-8 mb-12">
+      <p class="text-magenta-500 text-xs tracking-[0.3em] uppercase font-medium mb-2">2018 Honor</p>
+      <h3 class="text-white font-semibold text-xl mb-2">H.D. Thoreau Award — Track &amp; Field Writers of America</h3>
+      <p class="text-gray-400 text-sm leading-relaxed font-light">
+        Presented by TAFWA for excellence in Track and Field Broadcasting, coinciding with Ralph J. Mole's
+        39th year producing sports television for ESPN and Windfall's 10th consecutive year as
+        ESPN Collegiate Track &amp; Field packager. Previous recipients include Jim McKay (ABC Sports) and Dwight Stones.
+      </p>
+    </div>
+
+    <!-- Client roster (text chips, no logos) -->
+    <div class="border border-white/5 p-8">
+      <p class="text-gray-600 text-xs tracking-[0.3em] uppercase mb-6">Client Roster</p>
+      <div class="flex flex-wrap gap-3">
+        {clients.map((client) => (
+          <span class="text-gray-400 text-sm border border-white/10 px-3 py-1.5 hover:border-magenta-500/40 hover:text-white transition-colors">
+            {client}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

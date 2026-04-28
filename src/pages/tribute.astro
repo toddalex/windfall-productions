@@ -1,0 +1,249 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="In Memory of Ralph J. Molé — Windfall Productions"
+  description="A tribute to Ralph J. Molé (1949–2022), founder of Windfall Productions. Husband, father, mentor, and award-winning television producer."
+>
+  <Nav />
+
+  <main class="pt-20">
+
+    <!-- Hero / Headshot -->
+    <section class="relative py-24 bg-surface-900">
+      <!-- subtle gradient backdrop -->
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-[0.08]"
+        style="background: radial-gradient(circle, #F500F5 0%, transparent 70%); transform: translate(30%, -30%);">
+      </div>
+
+      <div class="relative max-w-5xl mx-auto px-6 text-center">
+        <p class="text-magenta-500 text-xs tracking-[0.5em] uppercase font-medium mb-8">
+          In Loving Memory
+        </p>
+
+        <div class="mb-10 flex justify-center">
+          <div class="relative">
+            <img
+              src="/images/tribute/00-headshot.jpg"
+              alt="Ralph J. Molé"
+              class="w-64 h-64 md:w-80 md:h-80 object-cover object-top rounded-full grayscale border-2 border-magenta-500/30"
+            />
+            <div class="absolute -inset-4 border border-magenta-500/15 rounded-full"></div>
+          </div>
+        </div>
+
+        <h1 class="font-serif italic text-5xl md:text-7xl text-white leading-tight mb-3">
+          Ralph J. Molé
+        </h1>
+        <p class="text-gray-400 text-lg tracking-[0.3em] mb-6">1949 &mdash; 2022</p>
+
+        <div class="w-16 h-[2px] bg-magenta-500 mx-auto mb-8"></div>
+
+        <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto italic">
+          Husband. Father. Mentor. Award-winning producer and director who built
+          a legacy that helped shape sports television.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 1: New York roots -->
+    <section class="py-20 bg-surface-800">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="flex justify-center">
+          <img src="/images/tribute/01-dad-young.jpg" alt="Ralph as a young man" class="max-w-[280px] w-full h-auto object-cover" loading="lazy" />
+        </div>
+
+        <div>
+          <p class="text-magenta-500 text-xs tracking-[0.4em] uppercase font-medium mb-4">A New Yorker</p>
+          <h2 class="font-serif italic text-3xl md:text-4xl text-white mb-6 leading-tight">
+            From Queens to the world stage
+          </h2>
+          <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+            <p>
+              A real New Yorker from the get go, he spent his youth in and around the city,
+              eventually moving with his parents to Ozone Park, Queens where he grew up
+              listening to 45 records from the emerging rock 'n' roll scene of the Sixties.
+            </p>
+            <p>
+              While attending Queens College he solidified his passion for rock and blues
+              guitar by forming several bands with his brother and local friends, playing
+              gigs in the smoky dives around the New York City area.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Sandra -->
+    <section class="py-20 bg-surface-900">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="md:order-2">
+          <img src="/images/tribute/02-dad-mom.jpg" alt="Ralph and Sandra" class="w-full object-cover" loading="lazy" />
+        </div>
+        <div class="md:order-1">
+          <p class="text-magenta-500 text-xs tracking-[0.4em] uppercase font-medium mb-4">The Love of His Life</p>
+          <h2 class="font-serif italic text-3xl md:text-4xl text-white mb-6 leading-tight">
+            Meeting Sandra
+          </h2>
+          <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+            <p>
+              It was at one of these shows that he met the love of his life,
+              <strong class="text-white font-medium">Sandra D'Alfonso</strong>,
+              and the two of them soon married and eventually settled down over the
+              Hudson River in the idyllic suburbs northwest of Manhattan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Founding Windfall -->
+    <section class="py-20 bg-surface-800">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img src="/images/tribute/08-dad-behind.jpg" alt="Ralph behind the scenes" class="w-full object-cover" loading="lazy" />
+        </div>
+        <div>
+          <p class="text-magenta-500 text-xs tracking-[0.4em] uppercase font-medium mb-4">Founding Windfall</p>
+          <h2 class="font-serif italic text-3xl md:text-4xl text-white mb-6 leading-tight">
+            A bold leap, just before fatherhood
+          </h2>
+          <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+            <p>
+              Courageously starting Windfall Productions in 1980 — just before the birth
+              of his sons — Ralph made an indelible mark on the television and sports
+              entertainment industry as an award-winning producer and director.
+            </p>
+            <p>
+              From the company's founding partnership with ESPN, Windfall would grow into
+              a trusted name across Olympic sports, motorsports, action sports, and
+              documentary television — driven by his uncompromising commitment to quality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Awards -->
+    <section class="py-20 bg-surface-900">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="md:order-2">
+          <img src="/images/tribute/04-dad-awards.jpg" alt="Ralph with his awards" class="w-full object-cover" loading="lazy" />
+        </div>
+        <div class="md:order-1">
+          <p class="text-magenta-500 text-xs tracking-[0.4em] uppercase font-medium mb-4">A Legacy of Excellence</p>
+          <h2 class="font-serif italic text-3xl md:text-4xl text-white mb-6 leading-tight">
+            Four Emmys. One uncompromising standard.
+          </h2>
+          <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+            <p>
+              Winning Emmys for his work at the Olympics, the X-Games, and Track &amp; Field,
+              Ralph leaves behind a legacy of incredible accomplishment in his field.
+            </p>
+            <p>
+              Across more than 1,500 productions, his pioneering work in multi-camera
+              and rider-mounted filming techniques helped redefine how live sports are broadcast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Mentor -->
+    <section class="py-20 bg-surface-800">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img src="/images/tribute/03-dad-don.jpg" alt="Ralph with Don Colantonio" class="w-full object-cover" loading="lazy" />
+        </div>
+        <div>
+          <p class="text-magenta-500 text-xs tracking-[0.4em] uppercase font-medium mb-4">Loved & Revered</p>
+          <h2 class="font-serif italic text-3xl md:text-4xl text-white mb-6 leading-tight">
+            A mentor to those who followed
+          </h2>
+          <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+            <p>
+              Ralph was loved and revered by his peers and colleagues, many of whom looked
+              up to him as a mentor. His longtime collaborations — including 15 years of
+              World Cup Skiing, 17 X-Games, and a decade as ESPN's Collegiate Track &amp; Field
+              packager — were defined as much by relationships as by the work itself.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Hard worker, family man -->
+    <section class="py-20 bg-surface-900">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="md:order-2">
+          <img src="/images/tribute/05-dad-mom-2.jpg" alt="Ralph with his family" class="w-full object-cover" loading="lazy" />
+        </div>
+        <div class="md:order-1">
+          <p class="text-magenta-500 text-xs tracking-[0.4em] uppercase font-medium mb-4">A Bountiful Life</p>
+          <h2 class="font-serif italic text-3xl md:text-4xl text-white mb-6 leading-tight">
+            For those he loved
+          </h2>
+          <div class="space-y-4 text-gray-400 font-light leading-relaxed">
+            <p>
+              Ralph was a hard worker and provided a bountiful life for those he loved.
+              He will be missed greatly by those close to him both through ties of family
+              and profession.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing tribute -->
+    <section class="py-24 bg-gradient-to-b from-surface-800 to-surface-900">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <div class="w-12 h-px bg-magenta-500 mx-auto mb-8"></div>
+
+        <p class="font-serif italic text-2xl md:text-3xl text-white leading-relaxed mb-12">
+          &ldquo;He leaves behind a legacy of incredible accomplishment in his field
+          &mdash; loved and revered by his peers and colleagues.&rdquo;
+        </p>
+
+        <div class="w-12 h-px bg-magenta-500 mx-auto mb-8"></div>
+
+        <p class="text-gray-500 text-sm tracking-[0.3em] uppercase">
+          Ralph J. Molé &nbsp;&bull;&nbsp; 1949 &mdash; 2022
+        </p>
+      </div>
+    </section>
+
+    <!-- Memorial video (final) -->
+    <section class="py-20 bg-surface-900">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <p class="text-magenta-500 text-xs tracking-[0.4em] uppercase font-medium mb-4">In Remembrance</p>
+          <h2 class="font-serif italic text-3xl md:text-4xl text-white leading-tight">
+            A Memorial
+          </h2>
+        </div>
+
+        <div class="relative w-full overflow-hidden bg-black border border-white/5" style="padding-bottom: 56.25%;">
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fjasoncstewart%2Fvideos%2F1182569012603726%2F&show_text=false&width=1280&t=0"
+            class="absolute top-0 left-0 w-full h-full"
+            style="border:none;overflow:hidden"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
+        </div>
+
+        <p class="text-center text-gray-600 text-xs mt-4">
+          Video shared by Jason Stewart on Facebook.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,65 @@
+---
+---
+
+<section
+  id="hero"
+  class="relative min-h-screen flex items-center justify-center overflow-hidden"
+>
+  <!-- Background: real control room photo -->
+  <div class="absolute inset-0">
+    <img
+      src="/images/hero-control-room.jpg"
+      alt="Windfall Productions control room"
+      class="w-full h-full object-cover object-center"
+    />
+    <div class="absolute inset-0 bg-surface-900/85"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-surface-900 via-surface-900/40 to-transparent"></div>
+  </div>
+
+  <!-- Magenta glow -->
+  <div
+    class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-[0.05]"
+    style="background: radial-gradient(circle, #F500F5 0%, transparent 70%); transform: translate(30%, -30%);"
+  ></div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20">
+    <p class="text-magenta-500 text-xs tracking-[0.5em] uppercase font-medium mb-12">
+      Est. 1980 &nbsp;&bull;&nbsp; Live Broadcast Television
+    </p>
+
+    <!-- Real logo at hero scale -->
+    <img
+      src="/images/wfp-logo-vector-white.svg"
+      alt="Windfall Productions LLC"
+      class="w-full max-w-[520px] mx-auto mb-10 h-auto"
+    />
+
+    <div class="w-16 h-[2px] bg-magenta-500 mx-auto mb-8"></div>
+
+    <p class="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed mb-12">
+      Award-winning live broadcast television production since 1980.
+      1,500+ productions. 4 Emmy Awards. One uncompromising standard.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="#portfolio"
+        class="px-8 py-3.5 bg-magenta-500 hover:bg-magenta-600 text-white font-semibold text-sm tracking-widest uppercase transition-colors"
+      >
+        View Portfolio
+      </a>
+      <a
+        href="#contact"
+        class="px-8 py-3.5 border border-white/20 hover:border-magenta-500 hover:text-magenta-400 text-white font-medium text-sm tracking-widest uppercase transition-colors"
+      >
+        Get in Touch
+      </a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/20">
+    <span class="text-xs tracking-widest uppercase">Scroll</span>
+    <div class="w-px h-12 bg-gradient-to-b from-white/20 to-transparent animate-pulse"></div>
+  </div>
+</section>

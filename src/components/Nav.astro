@@ -1,0 +1,88 @@
+---
+const links = [
+  { label: 'About', href: '/#about' },
+  { label: 'Portfolio', href: '/#portfolio' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Recognition', href: '/#recognition' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Tribute', href: '/tribute' },
+  { label: 'Contact', href: '/#contact' },
+];
+---
+
+<header
+  id="nav"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+>
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <a href="/" class="block group" aria-label="Windfall Productions">
+      <img
+        src="/images/wfp-logo-vector-white.svg"
+        alt="Windfall Productions LLC"
+        class="h-10 md:h-12 w-auto transition-opacity group-hover:opacity-80"
+      />
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class="text-sm tracking-wider text-gray-400 hover:text-magenta-400 transition-colors uppercase font-medium"
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="menu-btn"
+      class="md:hidden flex flex-col gap-1.5 p-2"
+      aria-label="Toggle menu"
+    >
+      <span class="block w-6 h-px bg-white transition-all"></span>
+      <span class="block w-6 h-px bg-white transition-all"></span>
+      <span class="block w-4 h-px bg-white transition-all"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden bg-surface-800/95 backdrop-blur-sm border-t border-white/10"
+  >
+    <nav class="flex flex-col px-6 py-4 gap-4">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class="text-sm tracking-wider text-gray-300 hover:text-magenta-400 transition-colors uppercase font-medium py-1"
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const nav = document.getElementById('nav');
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      nav?.classList.add('bg-surface-900/95', 'backdrop-blur-sm', 'border-b', 'border-white/10');
+    } else {
+      nav?.classList.remove('bg-surface-900/95', 'backdrop-blur-sm', 'border-b', 'border-white/10');
+    }
+  });
+
+  menuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  mobileMenu?.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+  });
+</script>

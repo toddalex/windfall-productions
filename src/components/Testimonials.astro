@@ -1,0 +1,58 @@
+---
+const testimonials = [
+  {
+    quote: "In my 20 year relationship with Ralph Mole and Windfall Productions I have used him numerous times… probably 100+ ESPN, ESPN2, (and other network) TV productions.",
+    name: 'Terry Dorner',
+    title: 'Vice President, Events and Entertainment Group',
+    company: 'Bonnier Corporation',
+  },
+  {
+    quote: "Ralph is an excellent sports director who really knows how to capture the drama and emotion of competition.",
+    name: 'Rich Williams',
+    title: 'Senior Producer, Packaged Show Unit',
+    company: 'ESPN',
+  },
+  {
+    quote: "Ralph produced and directed our Tour of Utah coverage. He is very detail oriented, time sensitive and creative television producer.",
+    name: 'Jeremy Castro',
+    title: 'General Manager, KJZZ TV / VP Broadcasting',
+    company: 'Utah Jazz',
+  },
+  {
+    quote: "Ralph is one of the few individuals in the sports broadcasting business who has the creative chops as well as the business acumen to succeed.",
+    name: 'Tom Feuer',
+    title: 'Professor of Practice & Director',
+    company: "Arizona State University's Cronkite School",
+  },
+];
+---
+
+<section id="testimonials" class="py-28 bg-surface-900">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="flex items-center gap-4 mb-4">
+      <div class="w-8 h-[2px] bg-magenta-500"></div>
+      <span class="text-magenta-500 text-xs tracking-[0.4em] uppercase font-medium">Testimonials</span>
+    </div>
+
+    <h2 class="font-serif italic text-5xl md:text-6xl text-white mb-16 leading-tight">
+      What Clients Say
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      {testimonials.map((t) => (
+        <div class="bg-surface-700 border border-white/5 p-8 flex flex-col">
+          <div class="text-magenta-500 font-serif text-5xl leading-none mb-4">&ldquo;</div>
+          <p class="text-gray-300 font-light leading-relaxed text-base flex-1 mb-8 italic">
+            {t.quote}
+          </p>
+          <div class="border-t border-white/5 pt-6">
+            <p class="text-white font-medium text-sm">{t.name}</p>
+            <p class="text-gray-500 text-xs mt-1">{t.title}</p>
+            <p class="text-magenta-500 text-[10px] tracking-wider uppercase mt-1">{t.company}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+---
+const services = [
+  {
+    title: 'Live Broadcast Production',
+    description: 'Full-service live event coverage — multi-camera setups, real-time switching, graphics packages, and broadcast-ready delivery to any network.',
+  },
+  {
+    title: 'Post-Production & Editing',
+    description: 'Professional editing, color grading, and finishing for TV specials, highlight packages, and long-form documentary content.',
+  },
+  {
+    title: 'Documentary Production',
+    description: 'End-to-end documentary production from concept through final delivery. We tell the stories that define sports and entertainment legacies.',
+  },
+  {
+    title: 'Sports Programming',
+    description: 'Deep expertise across Olympic sports, motorsports, action sports, equestrian, track & field, hockey, billiards, and more.',
+  },
+  {
+    title: 'Network Delivery',
+    description: 'Proven track record delivering broadcast-ready content to ESPN, NBC, CBS, ABC, FOX, SEC Network, Comcast SportsNet, VERSUS, and USA Network.',
+  },
+  {
+    title: 'Corporate Video Production',
+    description: 'Broadcast-quality production values for corporate communications, brand films, and organizational storytelling.',
+  },
+];
+---
+
+<section id="services" class="py-28 bg-surface-900">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="flex items-center gap-4 mb-4">
+      <div class="w-8 h-[2px] bg-magenta-500"></div>
+      <span class="text-magenta-500 text-xs tracking-[0.4em] uppercase font-medium">Services</span>
+    </div>
+
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+      <h2 class="font-serif italic text-5xl md:text-6xl text-white leading-tight">
+        What We Do
+      </h2>
+      <p class="text-gray-500 max-w-sm text-base font-light leading-relaxed">
+        Full-spectrum broadcast television production — concept to delivery.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
+      {services.map((service) => (
+        <div class="bg-surface-900 p-8 hover:bg-surface-700 transition-colors group">
+          <div class="w-6 h-[2px] bg-magenta-500 mb-6 group-hover:w-10 transition-all duration-300"></div>
+          <h3 class="text-white font-medium text-lg mb-3 tracking-wide">{service.title}</h3>
+          <p class="text-gray-500 text-sm leading-relaxed font-light">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

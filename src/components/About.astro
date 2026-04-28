@@ -1,0 +1,89 @@
+---
+const stats = [
+  { value: '1,500+', label: 'Productions' },
+  { value: '4', label: 'Emmy Awards' },
+  { value: '15+', label: 'Total Awards' },
+  { value: '1980', label: 'Founded' },
+];
+---
+
+<section id="about" class="py-28 bg-surface-900">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="flex items-center gap-4 mb-16">
+      <div class="w-8 h-[2px] bg-magenta-500"></div>
+      <span class="text-magenta-500 text-xs tracking-[0.4em] uppercase font-medium">About</span>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      <div>
+        <h2 class="font-serif italic text-5xl md:text-6xl text-white mb-8 leading-tight">
+          Crafting Broadcast <span class="not-italic font-sans font-black text-magenta-500">Excellence</span>
+        </h2>
+
+        <div class="space-y-5 text-gray-400 font-light leading-relaxed text-lg">
+          <p>
+            Windfall Productions was founded in 1980 by President and Executive Producer
+            <strong class="text-white font-medium">Ralph J. Mole'</strong> to provide production
+            services for ESPN. Over four decades, Windfall has grown into one of the most
+            respected names in sports and entertainment television — overseeing 1,500+ productions
+            and earning 4 Emmy Awards, 2 Cable Ace Awards, and more than 15 total industry honors.
+          </p>
+          <p>
+            Ralph directed Olympic coverage for ABC (Los Angeles), NBC (Seoul and Barcelona), and
+            served as Track & Field host broadcast director at the 1996 Atlanta Games — viewed by
+            nearly 2 billion people globally. His pioneering work in multi-camera and
+            rider-mounted filming techniques earned a 2005 Winter X Games Emmy Award for
+            revolutionizing how action sports are broadcast.
+          </p>
+          <p>
+            Windfall specializes in production, programming, operations, acquisitions, development,
+            and distribution across all media platforms — with deep roots in Olympic sports,
+            motorsports, action sports, and documentary storytelling.
+          </p>
+        </div>
+
+        <div class="mt-10">
+          <a
+            href="#contact"
+            class="inline-flex items-center gap-3 text-magenta-500 hover:text-magenta-400 font-medium tracking-wider uppercase text-sm transition-colors group"
+          >
+            Work with us
+            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-4">
+          {stats.map((stat) => (
+            <div class="bg-surface-700 border border-white/5 p-8">
+              <div class="font-sans font-black text-4xl text-magenta-500 mb-2">{stat.value}</div>
+              <div class="text-gray-500 text-xs tracking-wider uppercase font-medium">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Control room image -->
+        <div class="relative overflow-hidden">
+          <img
+            src="/images/hero-espn-clips.jpg"
+            alt="Windfall Productions on ESPN"
+            class="w-full object-cover h-48"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-900/60 to-transparent"></div>
+        </div>
+
+        <div class="bg-surface-700 border border-white/5 p-6">
+          <p class="text-gray-600 text-xs tracking-[0.3em] uppercase mb-4">Network Partnerships</p>
+          <div class="flex flex-wrap gap-x-5 gap-y-2">
+            {['ESPN', 'ESPNU', 'ESPN2', 'ESPN International', 'NBC Sports', 'CBS Sports', 'ABC', 'TBS', 'FOX', 'SEC Network', 'Longhorn Network', 'Comcast SportsNet'].map((net) => (
+              <span class="text-white/60 font-medium text-sm tracking-wide">{net}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
