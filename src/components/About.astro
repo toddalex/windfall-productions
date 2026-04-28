@@ -26,19 +26,19 @@ const stats = [
             Windfall Productions was founded in 1980 by President and Executive Producer
             <strong class="text-white font-medium">Ralph J. Mole'</strong> to provide production
             services for ESPN. Over four decades, Windfall has grown into one of the most
-            respected names in sports and entertainment television — overseeing 1,500+ productions
+            respected names in sports and entertainment television overseeing 1,500+ productions
             and earning 4 Emmy Awards, 2 Cable Ace Awards, and more than 15 total industry honors.
           </p>
           <p>
             Ralph directed Olympic coverage for ABC (Los Angeles), NBC (Seoul and Barcelona), and
-            served as Track & Field host broadcast director at the 1996 Atlanta Games — viewed by
+            served as Track & Field host broadcast director at the 1996 Atlanta Games viewed by
             nearly 2 billion people globally. His pioneering work in multi-camera and
             rider-mounted filming techniques earned a 2005 Winter X Games Emmy Award for
             revolutionizing how action sports are broadcast.
           </p>
           <p>
             Windfall specializes in production, programming, operations, acquisitions, development,
-            and distribution across all media platforms — with deep roots in Olympic sports,
+            and distribution across all media platforms with deep roots in Olympic sports,
             motorsports, action sports, and documentary storytelling.
           </p>
         </div>
@@ -77,9 +77,12 @@ const stats = [
 
         <div class="bg-surface-700 border border-white/5 p-6">
           <p class="text-gray-600 text-xs tracking-[0.3em] uppercase mb-4">Network Partnerships</p>
-          <div class="flex flex-wrap gap-x-5 gap-y-2">
-            {['ESPN', 'ESPNU', 'ESPN2', 'ESPN International', 'NBC Sports', 'CBS Sports', 'ABC', 'TBS', 'FOX', 'SEC Network', 'Longhorn Network', 'Comcast SportsNet'].map((net) => (
-              <span class="text-white/60 font-medium text-sm tracking-wide">{net}</span>
+          <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+            {['ESPN', 'ESPNU', 'ESPN2', 'ESPN International', 'NBC Sports', 'CBS Sports', 'ABC', 'TBS', 'FOX', 'SEC Network', 'Longhorn Network', 'Comcast SportsNet'].map((net, i, arr) => (
+              <>
+                <span class="text-white/60 font-medium text-sm tracking-wide">{net}</span>
+                {i < arr.length - 1 && <span class="text-magenta-500/60 text-xs">&bull;</span>}
+              </>
             ))}
           </div>
         </div>
